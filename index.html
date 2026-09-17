@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nusantara Legends — Fan Game Pokémon</title>
+  <meta name="description" content="Pokémon: Nusantara Legends — petualangan fan game di region kepulauan tropis. 150+ Pokémon baru, 8 Gym, sistem pertarungan klasik." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="brand" aria-label="Nusantara Legends beranda">
+        <span class="brand__ball" aria-hidden="true"></span>
+        <span class="brand__text">Nusantara<em>Legends</em></span>
+      </a>
+      <nav class="nav__links" id="navLinks" aria-label="Navigasi utama">
+        <a href="#about">Tentang</a>
+        <a href="#starters">Starter</a>
+        <a href="#dex">Pokédex</a>
+        <a href="#features">Fitur</a>
+        <a href="#region">Region</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#playtest" class="btn btn--sm btn--primary">Ikut Playtest</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__scan" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <div class="hero__copy">
+        <p class="tagline" id="typewriter" aria-live="polite"></p>
+        <h1 class="hero__title">
+          PETUALANGAN<br />
+          <span class="grad">KEPULAUAN</span><br />
+          TROPIS
+        </h1>
+        <p class="hero__desc">
+          Jelajahi empat gugusan pulau, tangkap 150+ Pokémon orisinal, dan tundukkan
+          Liga Nusantara. Fan game petualangan klasik dengan cita rasa nusantara.
+        </p>
+        <div class="hero__cta">
+          <a href="#playtest" class="btn btn--primary">Daftar Playtest</a>
+          <a href="#starters" class="btn btn--ghost">Lihat Starter</a>
+        </div>
+        <ul class="hero__stats" id="stats">
+          <li><strong data-count="150">0</strong><span>Pokémon Baru</span></li>
+          <li><strong data-count="4">0</strong><span>Region</span></li>
+          <li><strong data-count="8">0</strong><span>Gym</span></li>
+          <li><strong data-count="30">0</strong><span>Jam Cerita</span></li>
+        </ul>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <div class="ball">
+          <div class="ball__top"></div>
+          <div class="ball__bottom"></div>
+          <div class="ball__band"></div>
+          <div class="ball__core"><i></i></div>
+        </div>
+        <div class="pixel p1"></div>
+        <div class="pixel p2"></div>
+        <div class="pixel p3"></div>
+        <div class="pixel p4"></div>
+      </div>
+    </div>
+    <div class="hero__wave" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="container about">
+      <div class="about__text reveal">
+        <p class="kicker">// Tentang Game</p>
+        <h2 class="h2">Region yang hidup,<br />monster yang berkesan.</h2>
+        <p>
+          <strong>Pokémon: Nusantara Legends</strong> adalah fan game turn-based RPG yang
+          membawa formula klasik ke kepulauan tropis fiktif bernama <em>Nusantara</em>.
+          Setiap pulau punya ekosistem, cuaca, dan legenda endemiknya sendiri.
+        </p>
+        <p>
+          Mulai dari pesisir Selat Karang, naik ke kaldera Pulau Bara, menyusuri rimba
+          basah Borneo, sampai dataran tinggi Papua — semua terhubung dalam satu
+          perjalanan tanpa layar loading.
+        </p>
+        <ul class="check">
+          <li>Peta dunia mulus, tanpa loading antar-rute</li>
+          <li>Siklus siang-malam &amp; cuaca dinamis</li>
+          <li>Semua Pokémon orisinal, desain lokal</li>
+        </ul>
+      </div>
+      <div class="about__card reveal">
+        <div class="card-mock">
+          <div class="card-mock__bar">
+            <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+            <span class="card-mock__title">pokedex.log</span>
+          </div>
+          <pre class="card-mock__body"><span class="c-dim">$</span> scan --region nusantara
+<span class="c-ok">OK</span> 150 spesies terdaftar
+<span class="c-ok">OK</span> 4 region aktif
+<span class="c-ok">OK</span> 8 gym disetujui
+<span class="c-warn">!!</span> 1 legenda belum terlihat
+<span class="c-dim">$</span> _<span class="cursor">█</span></pre>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STARTERS ===== -->
+  <section class="section section--alt" id="starters">
+    <div class="container">
+      <div class="head reveal">
+        <p class="kicker">// Pilih Partner-mu</p>
+        <h2 class="h2">Tiga Starter, Tiga Takdir</h2>
+        <p class="sub">Keputusan pertama yang tidak bisa di-undo. Pilih dengan hati.</p>
+      </div>
+
+      <div class="starters">
+        <article class="starter starter--fire reveal" data-starter="barawo" tabindex="0" role="button" aria-label="Lihat detail Barawo">
+          <div class="starter__sprite" aria-hidden="true">
+            <div class="sprite sprite--fire"></div>
+          </div>
+          <h3>BARAWO</h3>
+          <p class="starter__type type--fire">Api</p>
+          <p class="starter__desc">Kadal vulkanik kecil yang tidur di dalam abu panas. Emosinya memicu percikan api.</p>
+          <ul class="bars">
+            <li><span>HP</span><i style="--v:70%"></i></li>
+            <li><span>ATK</span><i style="--v:85%"></i></li>
+            <li><span>DEF</span><i style="--v:55%"></i></li>
+            <li><span>SPD</span><i style="--v:75%"></i></li>
+          </ul>
+          <span class="starter__more">Lihat Detail</span>
+        </article>
+
+        <article class="starter starter--water reveal" data-starter="arunai" tabindex="0" role="button" aria-label="Lihat detail Arunai">
+          <div class="starter__sprite" aria-hidden="true">
+            <div class="sprite sprite--water"></div>
+          </div>
+          <h3>ARUNAI</h3>
+          <p class="starter__type type--water">Air</p>
+          <p class="starter__desc">Ikan arwana muda berlapis sisir kristal. Bisa menyemburkan gelembung bertekanan.</p>
+          <ul class="bars">
+            <li><span>HP</span><i style="--v:80%"></i></li>
+            <li><span>ATK</span><i style="--v:60%"></i></li>
+            <li><span>DEF</span><i style="--v:75%"></i></li>
+            <li><span>SPD</span><i style="--v:70%"></i></li>
+          </ul>
+          <span class="starter__more">Lihat Detail</span>
+        </article>
+
+        <article class="starter starter--grass reveal" data-starter="rimboa" tabindex="0" role="button" aria-label="Lihat detail Rimboa">
+          <div class="starter__sprite" aria-hidden="true">
+            <div class="sprite sprite--grass"></div>
+          </div>
+          <h3>RIMBOA</h3>
+          <p class="starter__type type--grass">Rumput</p>
+          <p class="starter__desc">Primata mungil penjaga tunas. Daun di punggungnya mekar mengikuti musim hujan.</p>
+          <ul class="bars">
+            <li><span>HP</span><i style="--v:75%"></i></li>
+            <li><span>ATK</span><i style="--v:65%"></i></li>
+            <li><span>DEF</span><i style="--v:85%"></i></li>
+            <li><span>SPD</span><i style="--v:60%"></i></li>
+          </ul>
+          <span class="starter__more">Lihat Detail</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POKÉDEX ===== -->
+  <section class="section" id="dex">
+    <div class="container">
+      <div class="head reveal">
+        <p class="kicker">// POKEDEX</p>
+        <h2 class="h2">Jelajahi 150 Spesies</h2>
+        <p class="sub">Cari berdasarkan nama atau filter berdasarkan tipe. Klik kartu untuk detail lengkap.</p>
+      </div>
+
+      <div class="dex__tools reveal">
+        <div class="dex__search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <label class="sr-only" for="dexSearch">Cari Pokémon</label>
+          <input type="search" id="dexSearch" placeholder="Cari nama Pokémon…" autocomplete="off" />
+        </div>
+        <div class="dex__filters" id="dexFilters" role="group" aria-label="Filter tipe">
+          <button class="filter is-active" data-type="all">Semua</button>
+          <button class="filter" data-type="api">Api</button>
+          <button class="filter" data-type="air">Air</button>
+          <button class="filter" data-type="rumput">Rumput</button>
+          <button class="filter" data-type="listrik">Listrik</button>
+          <button class="filter" data-type="batu">Batu</button>
+        </div>
+      </div>
+
+      <p class="dex__count" id="dexCount" role="status" aria-live="polite"></p>
+      <div class="dex__grid" id="dexGrid"></div>
+      <p class="dex__empty" id="dexEmpty" hidden>Tidak ada Pokémon yang cocok. Coba kata kunci lain.</p>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="section" id="features">
+    <div class="container">
+      <div class="head reveal">
+        <p class="kicker">// Fitur</p>
+        <h2 class="h2">Dibangun untuk Petualang</h2>
+      </div>
+      <div class="grid grid--3">
+        <article class="feat reveal">
+          <div class="feat__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18M3 12h18"/></svg>
+          </div>
+          <h3>150+ Pokémon Orisinal</h3>
+          <p>Semua spesies baru, dari fauna endemik sampai legenda penjaga kaldera.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+          </div>
+          <h3>Pertarungan Turn-Based</h3>
+          <p>Sistem klasik dengan mekanik cuaca dan terrain yang mengubah damage.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 3 8v8l9 5 9-5V8z"/><path d="M12 12v9M3 8l9 4 9-4"/></svg>
+          </div>
+          <h3>8 Gym + Elite Four</h3>
+          <p>Delapan pemimpin gym dengan puzzle bertema pulau masing-masing.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="10" r="2.5"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5M14 20c0-2 2-3.5 4-3.5s3 1 3 3.5"/></svg>
+          </div>
+          <h3>Tukar &amp; Duel Online</h3>
+          <p>Trade dan battle dengan teman lewat kode ruangan, tanpa akun tambahan.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg>
+          </div>
+          <h3>Cuaca &amp; Waktu Dinamis</h3>
+          <p>Hujan, kabut laut, dan gerhana mengubah Pokémon yang muncul.</p>
+        </article>
+        <article class="feat reveal">
+          <div class="feat__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 18V6l8-3 8 3v12l-8 3z"/><path d="M4 6l8 3 8-3M12 9v12"/></svg>
+          </div>
+          <h3>Soundtrack Orisinal</h3>
+          <p>24 trek gamelan-modern yang berubah mengikuti lokasi dan waktu.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REGION ===== -->
+  <section class="section section--alt" id="region">
+    <div class="container">
+      <div class="head reveal">
+        <p class="kicker">// Peta Dunia</p>
+        <h2 class="h2">Empat Gugusan, Satu Perjalanan</h2>
+      </div>
+      <div class="grid grid--2 regions">
+        <article class="region reveal" data-region="bara" tabindex="0" role="button" aria-label="Lihat galeri Pulau Bara">
+          <div class="region__art region__art--bara" aria-hidden="true"></div>
+          <div class="region__body">
+            <h3>Pulau Bara</h3>
+            <p>Kaldera aktif, kota pandai besi, dan gym tipe Api. Legenda penjaga magma tidur di kawahnya.</p>
+            <span class="chip">Tipe Api · Level 20–35</span>
+          </div>
+        </article>
+        <article class="region reveal" data-region="karang" tabindex="0" role="button" aria-label="Lihat galeri Selat Karang">
+          <div class="region__art region__art--karang" aria-hidden="true"></div>
+          <div class="region__body">
+            <h3>Selat Karang</h3>
+            <p>Kepulauan karang, pasar terapung, dan jalur selam. Pusat kontes dan trade di region ini.</p>
+            <span class="chip">Tipe Air · Level 5–25</span>
+          </div>
+        </article>
+        <article class="region reveal" data-region="rimba" tabindex="0" role="button" aria-label="Lihat galeri Rimba Borneo">
+          <div class="region__art region__art--rimba" aria-hidden="true"></div>
+          <div class="region__body">
+            <h3>Rimba Borneo</h3>
+            <p>Hutan hujan berkabut dengan kanopi berlapis. Banyak Pokémon langka hanya muncul saat hujan.</p>
+            <span class="chip">Tipe Rumput · Level 25–40</span>
+          </div>
+        </article>
+        <article class="region reveal" data-region="papua" tabindex="0" role="button" aria-label="Lihat galeri Dataran Papua">
+          <div class="region__art region__art--papua" aria-hidden="true"></div>
+          <div class="region__body">
+            <h3>Dataran Papua</h3>
+            <p>Pegunungan tinggi dan lembah tersembunyi. Ujian terakhir menuju Liga Nusantara.</p>
+            <span class="chip">Tipe Campuran · Level 40–60</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ROADMAP ===== -->
+  <section class="section" id="roadmap">
+    <div class="container">
+      <div class="head reveal">
+        <p class="kicker">// Roadmap</p>
+        <h2 class="h2">Perjalanan Pengembangan</h2>
+      </div>
+      <ol class="timeline">
+        <li class="timeline__item reveal">
+          <span class="timeline__dot"></span>
+          <div>
+            <p class="timeline__date">Q1 / Demo</p>
+            <h3>Pulau Awal &amp; 40 Pokémon</h3>
+            <p>Demo gratis berisi Selat Karang, 3 gym, dan sistem pertarungan penuh.</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__dot"></span>
+          <div>
+            <p class="timeline__date">Q2 / Beta</p>
+            <h3>Multiplayer &amp; Trade</h3>
+            <p>Uji terbuka fitur duel online, trade, dan event komunitas mingguan.</p>
+          </div>
+        </li>
+        <li class="timeline__item reveal">
+          <span class="timeline__dot"></span>
+          <div>
+            <p class="timeline__date">Q3 / Rilis 1.0</p>
+            <h3>Liga Nusantara Lengkap</h3>
+            <p>Semua region, 150 Pokémon, post-game legenda, dan mode Nuzlocke resmi.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== CTA / PLAYTEST ===== -->
+  <section class="section cta" id="playtest">
+    <div class="container cta__inner reveal">
+      <h2 class="h2">Jadi yang pertama menjejak Nusantara</h2>
+      <p class="sub">Slot playtest terbatas. Daftar sekarang, undangan dikirim lewat email saat demo siap.</p>
+      <form class="form" id="playtestForm" novalidate>
+        <label class="sr-only" for="email">Alamat email</label>
+        <input type="email" id="email" name="email" placeholder="nama@email.com" required autocomplete="email" />
+        <button type="submit" class="btn btn--primary">Daftar</button>
+      </form>
+      <p class="form__note" id="formNote" role="status"></p>
+    </div>
+  </section>
+
+  <!-- ===== MODAL ===== -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal__overlay" data-close></div>
+    <div class="modal__panel" role="document">
+      <button class="modal__close" id="modalClose" aria-label="Tutup detail">&times;</button>
+      <div class="modal__content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__ball" aria-hidden="true"></span>
+        <strong>Nusantara Legends</strong>
+        <p>Fan game non-komersial. Pokémon adalah merek dagang Nintendo / Game Freak / Creatures Inc. Proyek ini tidak berafiliasi.</p>
+      </div>
+      <nav class="footer__links" aria-label="Tautan footer">
+        <a href="#about">Tentang</a>
+        <a href="#starters">Starter</a>
+        <a href="#dex">Pokédex</a>
+        <a href="#features">Fitur</a>
+        <a href="#region">Region</a>
+        <a href="#playtest">Playtest</a>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year"></span> Nusantara Legends. Dibuat oleh penggemar, untuk penggemar.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
